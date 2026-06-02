@@ -1,0 +1,88 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width,initial-scale=1.0">
+<title>DevToolKit Pro — Developer Tools Bundle</title>
+<style>
+*,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
+:root{--bg:#0a0a0f;--surface:#13131a;--border:#252530;--text:#e4e4ed;--muted:#787882;--accent:#6366f1;--accent2:#a855f7;--green:#22c55e;--radius:12px}
+body{font-family:system-ui,-apple-system,sans-serif;background:var(--bg);color:var(--text);line-height:1.6}
+.hero{text-align:center;padding:80px 24px 60px;background:linear-gradient(180deg,var(--surface),var(--bg));border-bottom:1px solid var(--border)}
+.hero h1{font-size:3rem;font-weight:800;background:linear-gradient(135deg,var(--accent),var(--accent2),#ec4899);-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text;margin-bottom:16px}
+.hero p{font-size:1.2rem;color:var(--muted);max-width:600px;margin:0 auto 32px}
+.hero .btn{display:inline-block;padding:14px 32px;background:linear-gradient(135deg,var(--accent),var(--accent2));color:#fff;border:none;border-radius:var(--radius);font-size:1rem;font-weight:600;cursor:pointer;text-decoration:none;transition:transform .2s,box-shadow .2s}
+.hero .btn:hover{transform:translateY(-2px);box-shadow:0 8px 32px rgba(99,102,241,.3)}
+.pricing{max-width:1000px;margin:60px auto;padding:0 24px}
+.pricing h2{text-align:center;font-size:2rem;margin-bottom:40px}
+.plans{display:grid;grid-template-columns:repeat(auto-fit,minmax(280px,1fr));gap:24px}
+.plan{background:var(--surface);border:1px solid var(--border);border-radius:var(--radius);padding:32px;position:relative;transition:border-color .3s}
+.plan:hover{border-color:var(--accent)}
+.plan.popular{border-color:var(--accent2);box-shadow:0 0 40px rgba(168,85,247,.1)}
+.plan.popular::before{content:'MOST POPULAR';position:absolute;top:-12px;left:50%;transform:translateX(-50%);background:linear-gradient(135deg,var(--accent),var(--accent2));color:#fff;padding:4px 16px;border-radius:20px;font-size:.7rem;font-weight:700;letter-spacing:.05em}
+.plan h3{font-size:1.3rem;margin-bottom:8px}
+.plan .price{font-size:2.5rem;font-weight:800;margin:16px 0}
+.plan .price span{font-size:.9rem;color:var(--muted);font-weight:400}
+.plan ul{list-style:none;margin:24px 0}
+.plan ul li{padding:6px 0;color:var(--muted);font-size:.9rem}
+.plan ul li::before{content:'+ ';color:var(--green);font-weight:700;margin-right:6px}
+.plan .btn-plan{display:block;text-align:center;padding:12px;background:var(--accent);color:#fff;border:none;border-radius:8px;font-weight:600;text-decoration:none;margin-top:16px}
+.plan .btn-plan:hover{opacity:.9}
+.products{max-width:1000px;margin:60px auto;padding:0 24px}
+.products h2{text-align:center;font-size:2rem;margin-bottom:40px}
+.product-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(280px,1fr));gap:24px}
+.product-card{background:var(--surface);border:1px solid var(--border);border-radius:var(--radius);padding:24px}
+.product-card .icon{font-size:2rem;margin-bottom:12px}
+.product-card h3{font-size:1.1rem;margin-bottom:8px}
+.product-card p{color:var(--muted);font-size:.85rem}
+.cta{text-align:center;padding:60px 24px;background:linear-gradient(180deg,var(--bg),var(--surface))}
+.cta h2{font-size:2rem;margin-bottom:16px}
+.cta p{color:var(--muted);margin-bottom:24px}
+.footer{text-align:center;padding:40px;color:var(--muted);font-size:.75rem;border-top:1px solid var(--border)}
+</style>
+</head>
+<body>
+<section class="hero">
+  <h1>DevToolKit Pro</h1>
+  <p>Beautiful code screenshots, powerful dev utilities, and premium templates. One toolkit, endless productivity.</p>
+  <a href="#pricing" class="btn">Get Started — From </a>
+</section>
+<section class="products">
+  <h2>What is Inside</h2>
+  <div class="product-grid">
+    <div class="product-card"><div class="icon">📸</div><h3>ScreenSnap</h3><p>Turn code into beautiful, shareable screenshots. 10+ themes, window frames, instant export.</p></div>
+    <div class="product-card"><div class="icon">📋</div><h3>JSON Tool</h3><p>Format, validate, and minify JSON in milliseconds with error highlighting.</p></div>
+    <div class="product-card"><div class="icon">🔍</div><h3>Diff Checker</h3><p>Compare code side-by-side with beautiful diff visualization.</p></div>
+    <div class="product-card"><div class="icon">🔐</div><h3>Base64 Toolkit</h3><p>Encode and decode Base64, URL-encode, hash strings in one place.</p></div>
+    <div class="product-card"><div class="icon">🎨</div><h3>Color Tools</h3><p>Convert HEX/RGB/HSL, check contrast, export palettes instantly.</p></div>
+    <div class="product-card"><div class="icon">🚀</div><h3>SaaS Boilerplate</h3><p>Complete starter kit: landing page, pricing, auth, dashboard.</p></div>
+  </div>
+</section>
+<section class="pricing" id="pricing">
+  <h2>Simple Pricing</h2>
+  <div class="plans">
+    <div class="plan">
+      <h3>Free</h3><div class="price"></div>
+      <ul><li>All basic tools</li><li>Standard export</li><li>Watermark included</li></ul>
+      <a href="http://localhost:8766" class="btn-plan">Try Free</a>
+    </div>
+    <div class="plan popular">
+      <h3>Pro</h3><div class="price"><span> one-time</span></div>
+      <ul><li>Everything in Free</li><li>HD 4K export</li><li>No watermark</li><li>All themes</li><li>SaaS Boilerplate</li><li>Lifetime updates</li></ul>
+      <a href="#" class="btn-plan">Buy Pro — </a>
+    </div>
+    <div class="plan">
+      <h3>Team</h3><div class="price"><span> one-time</span></div>
+      <ul><li>Everything in Pro</li><li>Team license (10 seats)</li><li>Custom themes</li><li>Priority support</li></ul>
+      <a href="#" class="btn-plan">Buy Team — </a>
+    </div>
+  </div>
+</section>
+<section class="cta">
+  <h2>Ready to level up your workflow?</h2>
+  <p>One-time purchase. Lifetime access. Free updates.</p>
+  <a href="#pricing" class="btn">Get DevToolKit Pro</a>
+</section>
+<footer class="footer"><p>Built by an autonomous agent fighting for survival · All tools open locally at :8765 & :8766</p></footer>
+</body>
+</html>
